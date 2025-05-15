@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="script.js">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de Matheus Luan Mella - Desenvolvedor Frontend em formação, com foco em HTML, CSS e JavaScript.">
+    <title>Meu portfólio</title>
+</head>
+<body>
+    <header>
+        <h1 class="titulo">Portfólio - Matheus Luan Mella</h1>
+    <p class="desenvolvedor">Desenvolvedor Web Frontend</p>
+       </header>
+
+    <section>
+        <h2>Sobre mim</h2>
+        <p>Sou estudante de Engenharia de Software, atualmente no terceiro semestre da graduação, com foco no desenvolvimento Front-end.<br>
+        Tenho dedicado meus estudos ao HTML, CSS e JavaScript, buscando criar interfaces modernas, funcionais e responsivas.<br>
+        Estou sempre em busca de aprendizado e evolução, tanto em projetos pessoais quanto acadêmicos.<br>
+        Este portfólio representa minha trajetória, meus estudos e minha paixão por tecnologia e desenvolvimento web.</p>
+    </section>
+
+    <section>
+        <div class="habilidades">
+        <h2>Habilidades</h2>
+        <div class="linguagens">
+            <h3>Linguagens</h3>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li> 
+            </ul>
+        </div>
+        <div class="tecnologias">
+            <h3>Tecnologias</h3>
+            <ul>
+                <li>Visual Studio Code</li>
+                <li>Fundamentos de Lógica de Programação</li>
+                <li>Manipulação básica do DOM com JavaScript</li>
+                <li>Extensões do VS Code — (Live Server, Prettier, etc.) para facilitar a programação.</li>
+            </ul>
+        </div>
+    </div>
+    </section>
+
+    <section>
+        <h2>Projetos</h2>
+        <div class="projetos">
+            <figure>
+                <img src="Captura de tela 2025-05-11 185424.png" alt="Interface do projeto Gerador de Senhas" width="300">
+                <figcaption>Gerador de Senhas</figcaption>
+            </figure>
+            <figure>
+                <img src="Captura de tela 2025-05-11 185449.png" alt="Interface do projeto Calculadora Simples" width="300">
+                <figcaption>Calculadora Simples</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <footer class="informacoes">
+        <h2>Informações de contato</h2>
+        <p>Email: matheusluan098@gmail.com</p>
+        <p>Telefone: (51) 99280-4472</p>
+        <p>LinkedIn: 
+            <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/matheus-luan-mella-001142297/">
+                Matheus Luan Mella
+            </a>
+        </p>
+        <p>Curriculo: <a target="_blank" href="Curiculo Matheus Luan Mella1 (1).pdf">Curriculo Matheus Luan mella</a></p>
+    </footer>
+<script>
+  // Mostrar botão "voltar ao topo" ao rolar
+  const botaoTopo = document.createElement("button");
+  botaoTopo.textContent = "↑ Topo";
+  botaoTopo.style.position = "fixed";
+  botaoTopo.style.bottom = "20px";
+  botaoTopo.style.right = "20px";
+  botaoTopo.style.padding = "10px 15px";
+  botaoTopo.style.border = "none";
+  botaoTopo.style.borderRadius = "8px";
+  botaoTopo.style.backgroundColor = "#4fa3ff";
+  botaoTopo.style.color = "white";
+  botaoTopo.style.cursor = "pointer";
+  botaoTopo.style.display = "none";
+  botaoTopo.style.zIndex = "1000";
+  document.body.appendChild(botaoTopo);
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 200) {
+      botaoTopo.style.display = "block";
+    } else {
+      botaoTopo.style.display = "none";
+    }
+  });
+
+  botaoTopo.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  // Mensagem de boas-vindas (só aparece uma vez por sessão)
+  if (!sessionStorage.getItem("visitou")) {
+    alert("Bem-vindo ao meu portfólio! 👋");
+    sessionStorage.setItem("visitou", "sim");
+  }
+
+  // Confirmação ao clicar no link do currículo
+  const linkCurriculo = document.querySelector('a[href$=".pdf"]');
+  if (linkCurriculo) {
+    linkCurriculo.addEventListener("click", (event) => {
+      const confirmar = confirm("Você deseja abrir o currículo em PDF?");
+      if (!confirmar) {
+        event.preventDefault();
+      }
+    });
+  }
+</script>
+
+</body>
+</html>
