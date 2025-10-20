@@ -1,127 +1,175 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfólio de Matheus Luan Mella — Desenvolvedor Frontend em formação, estudante de Engenharia de Software na UNOPAR. Foco em HTML, CSS, JavaScript e automação.">
-  <title>Portfólio | Matheus Luan Mella</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Portfólio de Matheus Luan Mella — Estudante de Engenharia de Software (UNOPAR). Desenvolvedor Frontend com foco em HTML, CSS, JavaScript e automação." />
+  <title>Matheus Luan Mella — Portfólio</title>
 
-  <!-- Importa Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Fonte limpa -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Estilos -->
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <header>
-    <div class="cabecalho-texto">
-      <h1 class="titulo">Matheus Luan Mella</h1>
-      <p class="desenvolvedor">Desenvolvedor Web Frontend</p>
+  <a class="skip-link" href="#main">Ir para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1 class="name">Matheus Luan Mella</h1>
+        <p class="role">Desenvolvedor Web Frontend — Estudante de Engenharia de Software (UNOPAR)</p>
+      </div>
+
+      <nav aria-label="Navegação principal">
+        <ul class="nav-list">
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#habilidades">Habilidades</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
     </div>
-    <nav>
-      <ul class="menu">
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#habilidades">Habilidades</a></li>
-        <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
   </header>
 
-  <main>
-    <section id="sobre">
-      <h2>Sobre mim</h2>
-      <p>Sou estudante de Engenharia de Software pela UNOPAR, atualmente no terceiro semestre. Tenho interesse em desenvolvimento web, automação e soluções digitais. Busco aplicar meus conhecimentos em projetos reais e contribuir com o crescimento das equipes onde atuo, sempre evoluindo profissionalmente na área de tecnologia.</p>
+  <main id="main" class="container">
+    <section id="sobre" class="section">
+      <h2>Sobre</h2>
+      <p class="lead">
+        Sou estudante de Engenharia de Software (UNOPAR), atualmente no terceiro semestre.
+        Tenho interesse em desenvolvimento web, automação e soluções digitais. Busco aplicar
+        conhecimentos em projetos reais, colaborar em equipes e evoluir continuamente.
+      </p>
+
+      <div class="quick-info">
+        <div>
+          <strong>Local:</strong> Roca Sales — RS (disponível para mudança para Lajeado — RS)
+        </div>
+        <div>
+          <strong>Cargo procurado:</strong> Estágio / Primeiro emprego em desenvolvimento web
+        </div>
+      </div>
     </section>
 
-    <section id="habilidades">
-      <h2>Habilidades Técnicas</h2>
-      <div class="habilidades">
-        <div class="linguagens">
-          <h3>Linguagens e Ferramentas</h3>
+    <section id="habilidades" class="section">
+      <h2>Habilidades</h2>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Técnicas</h3>
           <ul>
-            <li>HTML, CSS, JavaScript (básico/intermediário)</li>
+            <li>HTML, CSS, JavaScript (básico → intermediário)</li>
             <li>Noções de Banco de Dados (SQLite)</li>
-            <li>Visual Studio Code, GitHub, Microsoft Office, Figma</li>
-            <li>Lógica de Programação e noções de APIs REST</li>
-            <li>Automação de tarefas com PowerShell</li>
+            <li>Visual Studio Code, GitHub, Figma</li>
+            <li>Noções de APIs REST e lógica de programação</li>
+            <li>Automação com PowerShell</li>
           </ul>
         </div>
 
-        <div class="competencias">
-          <h3>Competências Pessoais</h3>
+        <div class="card">
+          <h3>Pessoais</h3>
           <ul>
             <li>Trabalho em equipe</li>
             <li>Comunicação eficaz</li>
             <li>Organização e gestão do tempo</li>
             <li>Resolução de problemas</li>
             <li>Proatividade e aprendizado contínuo</li>
-            <li>Liderança e apoio a pessoas</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <section id="projetos">
+    <section id="projetos" class="section">
       <h2>Projetos</h2>
-      <div class="projetos">
+
+      <p class="lead">Pequena seleção de projetos pessoais — links apontam para os repositórios / demos quando disponíveis.</p>
+
+      <ul class="projects-list">
+        <li>
+          <strong>Portfólio Web</strong> — Site responsivo em HTML, CSS e JavaScript.
+          <!-- Se tiver link, substitua # pelo URL do repositório ou demo -->
+          <a href="#" class="project-link" aria-label="Ver Portfólio Web (link)">Ver</a>
+        </li>
+
+        <li>
+          <strong>Calculadora Online</strong> — Calculadora interativa criada com JavaScript.
+          <a href="#" class="project-link">Ver</a>
+        </li>
+
+        <li>
+          <strong>Gerador de Senhas</strong> — Ferramenta para gerar senhas seguras.
+          <a href="#" class="project-link">Ver</a>
+        </li>
+
+        <li>
+          <strong>Automação de Blog</strong> — Script em PowerShell com integração de IA para publicar no LinkedIn automaticamente.
+          <a href="#" class="project-link">Ver</a>
+        </li>
+      </ul>
+
+      <div class="project-screens">
         <figure>
-          <img src="Captura de tela 2025-05-11 185424.png" alt="Interface do projeto Gerador de Senhas" width="300">
+          <img src="Captura de tela 2025-05-11 185424.png" alt="Captura do Gerador de Senhas">
           <figcaption>Gerador de Senhas</figcaption>
         </figure>
         <figure>
-          <img src="Captura de tela 2025-05-11 185449.png" alt="Interface do projeto Calculadora Simples" width="300">
-          <figcaption>Calculadora Simples</figcaption>
+          <img src="Captura de tela 2025-05-11 185449.png" alt="Captura da Calculadora">
+          <figcaption>Calculadora</figcaption>
         </figure>
       </div>
-      <ul class="lista-projetos">
-        <li><strong>Portfólio Web</strong> — Site responsivo desenvolvido com HTML, CSS e JavaScript.</li>
-        <li><strong>Calculadora Online</strong> — Calculadora interativa feita com HTML, CSS e JavaScript.</li>
-        <li><strong>Gerador de Senhas</strong> — Ferramenta web para geração de senhas seguras.</li>
-        <li><strong>Automação de Blog</strong> — Script com IA e PowerShell que monitora posts e publica automaticamente no LinkedIn.</li>
-      </ul>
     </section>
   </main>
 
-  <footer id="contato" class="informacoes">
-    <h2>Contato</h2>
-    <p>Email: <a href="mailto:matheusluan098@gmail.com">matheusluan098@gmail.com</a></p>
-    <p>Telefone: (51) 99280-4472</p>
-    <p>LinkedIn: 
-      <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/matheus-luan-mella-001142297/">
-        Matheus Luan Mella
-      </a>
-    </p>
-    <p>Currículo: 
-      <a target="_blank" href="Matheus_Mella_Curriculo_2025.pdf">Baixar Currículo 2025</a>
-    </p>
+  <footer id="contato" class="site-footer">
+    <div class="container footer-inner">
+      <div class="contact">
+        <h3>Contato</h3>
+        <p>Email: <a href="mailto:matheusluan098@gmail.com">matheusluan098@gmail.com</a></p>
+        <p>Telefone: <a href="tel:+5551992804472">(51) 99280-4472</a></p>
+        <p>LinkedIn: <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/matheus-luan-mella-001142297/">matheus-luan-mella</a></p>
+        <p>Currículo: <a target="_blank" href="Matheus_Mella_Curriculo_2025.pdf">Baixar Currículo (PDF)</a></p>
+      </div>
+
+      <div class="footer-meta">
+        <p>Disponível para entrevistas presenciais ou remotas.</p>
+        <p class="small">© <span id="ano"></span> Matheus L. Mella — Desenvolvedor Frontend</p>
+      </div>
+    </div>
   </footer>
 
-  <button id="btnTopo" class="btn-topo" title="Voltar ao topo">↑</button>
+  <!-- Botão topo fixo -->
+  <button id="btnTopo" class="btn-topo" aria-label="Voltar ao topo">↑</button>
 
   <script>
-    // Botão "voltar ao topo"
-    const botaoTopo = document.getElementById("btnTopo");
-    window.addEventListener("scroll", () => {
-      botaoTopo.style.display = window.scrollY > 200 ? "block" : "none";
-    });
-    botaoTopo.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
+    // atualiza ano no rodapé
+    document.getElementById('ano').textContent = new Date().getFullYear();
 
-    // Mensagem de boas-vindas
-    if (!sessionStorage.getItem("visitou")) {
-      alert("Bem-vindo ao meu portfólio! 👋");
-      sessionStorage.setItem("visitou", "sim");
-    }
+    // botão topo
+    const btnTopo = document.getElementById('btnTopo');
+    window.addEventListener('scroll', () => {
+      btnTopo.style.display = window.scrollY > 300 ? 'block' : 'none';
+    });
+    btnTopo.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-    // Confirmação para abrir currículo
-    const linkCurriculo = document.querySelector('a[href$=".pdf"]');
-    if (linkCurriculo) {
-      linkCurriculo.addEventListener("click", (event) => {
-        const confirmar = confirm("Você deseja abrir o currículo em PDF?");
-        if (!confirmar) event.preventDefault();
+    // confirmação ao abrir currículo (opcional)
+    const linkCV = document.querySelector('a[href$="Matheus_Mella_Curriculo_2025.pdf"]');
+    if (linkCV) {
+      linkCV.addEventListener('click', (e) => {
+        if (!confirm('Abrir currículo em PDF?')) e.preventDefault();
       });
     }
+
+    // smooth scroll for internal links (improves UX on some browsers)
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', function (e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
   </script>
 </body>
 </html>
