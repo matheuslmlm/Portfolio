@@ -1,3 +1,4 @@
+/* Reset e base */
 * {
   margin: 0;
   padding: 0;
@@ -15,36 +16,57 @@ body {
 /* Cabeçalho */
 header {
   background-color: #111;
-  padding: 30px 40px;
+  padding: 25px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 2px solid #4fa3ff;
+  flex-wrap: wrap;
 }
 
 .titulo {
   font-size: 28px;
   color: #4fa3ff;
+  font-weight: 600;
 }
 
 .desenvolvedor {
-  font-size: 20px;
-  color: #dddddd;
+  font-size: 18px;
+  color: #ddd;
 }
 
-/* Seções e rodapé */
+/* Menu */
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.menu a {
+  color: #f0f0f0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: #4fa3ff;
+}
+
+/* Seções */
 section, footer {
-  padding: 40px 60px;
+  padding: 50px 60px;
   border-bottom: 1px solid #333;
 }
 
 h2, h3 {
   color: #4fa3ff;
   margin-bottom: 10px;
+  font-weight: 600;
 }
 
 p, li {
-  color: #dddddd;
+  color: #ddd;
+  font-size: 15px;
 }
 
 /* Habilidades */
@@ -52,19 +74,15 @@ p, li {
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
+  margin-top: 20px;
 }
 
 .linguagens, .competencias {
   background-color: #2a2a2e;
-  padding: 20px;
+  padding: 25px;
   border-radius: 10px;
   width: 300px;
   box-shadow: 0 0 10px rgba(0,0,0,0.4);
-}
-
-ul {
-  list-style: circle;
-  margin-left: 20px;
 }
 
 /* Projetos */
@@ -72,6 +90,7 @@ ul {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+  margin-top: 20px;
 }
 
 figure {
@@ -79,22 +98,28 @@ figure {
   padding: 15px;
   border-radius: 8px;
   text-align: center;
-  transition: transform 0.2s ease;
+  transition: transform 0.3s ease;
 }
 
 figure:hover {
-  transform: scale(1.03);
+  transform: scale(1.05);
 }
 
 figcaption {
   color: #4fa3ff;
   margin-top: 10px;
-  font-weight: bold;
+  font-weight: 600;
+}
+
+.lista-projetos {
+  margin-top: 20px;
+  list-style: circle;
+  margin-left: 20px;
 }
 
 /* Rodapé */
 footer {
-  background-color: #292a2d;
+  background-color: #111;
   color: #ccc;
   text-align: left;
   border-top: 2px solid #4fa3ff;
@@ -112,20 +137,49 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Responsividade */
+/* Botão topo */
+.btn-topo {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: #4fa3ff;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  z-index: 1000;
+  display: none;
+}
+
+.btn-topo:hover {
+  background-color: #1e90ff;
+  transform: scale(1.05);
+}
+
+/* Responsivo */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
+    align-items: center;
     text-align: center;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  section, footer {
+    padding: 25px;
   }
 
   .habilidades, .projetos {
     flex-direction: column;
     align-items: center;
-  }
-
-  section, footer {
-    padding: 20px;
   }
 
   .linguagens, .competencias {
